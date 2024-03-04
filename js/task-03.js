@@ -14,10 +14,10 @@ const images = [
 ];
 const galleryList = document.querySelector(".gallery");
 
-for (const obraz of images) {
-const image = document.createElement("img");
-image.src = obraz.url;
-image.alt = obraz.alt;
-galleryList.append(image);
-};
-galleryList.insertAdjacentHTML("beforeend", image);
+const items = images
+  .map((image) => 
+  `<li class="gallery-item">
+  <img src="${image.url} alt="${image.alt}" ></li>`
+  ).join(" "); 
+
+galleryList.insertAdjacentHTML("beforeend", items);

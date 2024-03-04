@@ -9,8 +9,10 @@ const ingredients = [
 
 const ingredientsList = document.getElementById("ingredients");
 
-for (let i = 0; i < ingredients.length; i +=1) {
+const items = ingredients.map((item) => {
 const listItem = document.createElement("li");
-listItem.textContent = ingredients[i];
+listItem.textContent = item;
 listItem.classList.add("item");
-ingredientsList.appendChild(listItem);};
+return listItem });
+
+ingredientsList.append(...items)

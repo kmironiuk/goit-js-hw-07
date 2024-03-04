@@ -31,4 +31,5 @@ document.querySelector("[data-create]").addEventListener("click", () => {
 
 document.querySelector("[data-destroy]").addEventListener("click", () => {
   destroyBoxes();
+  document.querySelector("input").value = "";
 });
